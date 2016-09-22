@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t16-cA-FTq" customClass="PlayingCardView">
+                                <rect key="frame" x="175" y="121" width="250" height="358"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="t16-cA-FTq" secondAttribute="height" multiplier="125:179" id="Wo6-TY-SF4"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bff-rs-ZfI" appends="YES" id="qpe-cy-Mcd"/>
+                                    <outletCollection property="gestureRecognizers" destination="ph9-kY-M3d" appends="YES" id="nia-Xc-nCv"/>
+                                    <outletCollection property="gestureRecognizers" destination="MmT-Ne-G6u" appends="YES" id="wmP-4n-4v6"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="t16-cA-FTq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="5:12" id="BA9-Zx-Izu"/>
+                            <constraint firstItem="t16-cA-FTq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bQd-g9-ZhW"/>
+                            <constraint firstItem="t16-cA-FTq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rt3-2g-8vQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playingCardView" destination="t16-cA-FTq" id="JTI-uv-XC0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="bff-rs-ZfI">
+                    <connections>
+                        <action selector="swipedCardView:" destination="BYZ-38-t0r" id="YQh-Jf-Hn2"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <pinchGestureRecognizer id="ph9-kY-M3d"/>
+                <rotationGestureRecognizer id="MmT-Ne-G6u"/>
+            </objects>
+            <point key="canvasLocation" x="445" y="474"/>
+        </scene>
+    </scenes>
+</document>
